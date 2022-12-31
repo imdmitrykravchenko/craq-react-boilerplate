@@ -1,6 +1,7 @@
 import fs from "fs";
 import { createCraqServer, configureContext } from "craq-server";
 import react from "craq-react-renderer/dist/server";
+import { configureStore } from "@reduxjs/toolkit";
 
 import routes from "./routes";
 import bundles from "./bundles";
@@ -13,7 +14,7 @@ const context = configureContext({
   actions,
   components,
   routes,
-  reducers: { test: testReducer },
+  store: configureStore({ reducer: { test: testReducer } }),
 });
 
 const options = {

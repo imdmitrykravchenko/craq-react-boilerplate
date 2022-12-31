@@ -1,5 +1,6 @@
 import { createCraqClient, configureContext } from "craq-client";
 import react from "craq-react-renderer/dist/client";
+import { configureStore } from "@reduxjs/toolkit";
 
 import routes from "./routes";
 import bundles from "./bundles";
@@ -12,7 +13,12 @@ const context = configureContext({
   actions,
   components,
   routes,
-  reducers: { test: testReducer },
+  store: configureStore({
+    reducer: { test: testReducer },
+    devTools: true,
+    // @ts-ignore
+    preloadedState: window.__INITIAL_STATE__,
+  }),
 });
 
 const options = {

@@ -1,5 +1,5 @@
 import { Link } from "router6-react";
-import { connect } from "craq-react-renderer";
+import { connect } from "craq-react-redux";
 import incrementAction from "../../actions/increment";
 
 type SegmentPageProps = {

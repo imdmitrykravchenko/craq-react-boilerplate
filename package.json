@@ -13,10 +13,11 @@
   "license": "ISC",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
-    "craq": "^0.1.1",
-    "craq-client": "^0.1.1",
-    "craq-react-renderer": "^0.1.3",
-    "craq-server": "^0.1.1",
+    "craq": "^0.2.1",
+    "craq-client": "^0.2.0",
+    "craq-react-redux": "^0.0.1",
+    "craq-react-renderer": "^0.2.0",
+    "craq-server": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "router6-react": "0.0.1"
