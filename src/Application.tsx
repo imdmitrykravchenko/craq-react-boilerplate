@@ -1,11 +1,8 @@
-import { RouterProvider, useRouter } from "router6-react";
-import { Provider } from "react-redux";
-import { Context } from "craq";
-import { ComponentContextProvider } from "craq-react-renderer";
+import { useRouter } from "router6-react";
 
 const NoPage = () => <div>No page</div>;
 
-const App = ({ context }) => {
+const Application = ({ context }) => {
   const { currentRoute } = useRouter();
 
   const PageComponent =
@@ -13,15 +10,5 @@ const App = ({ context }) => {
 
   return <PageComponent route={currentRoute} />;
 };
-
-const Application = ({ context }: { context: Context<any> }) => (
-  <RouterProvider router={context.router}>
-    <ComponentContextProvider value={context.componentContext}>
-      <Provider store={context.getStore()}>
-        <App context={context} />
-      </Provider>
-    </ComponentContextProvider>
-  </RouterProvider>
-);
 
 export default Application;
