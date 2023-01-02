@@ -1,11 +1,11 @@
 {
-  "name": "craq-example",
+  "name": "craq-react-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run clean && ts-node webpack/dev.ts",
-    "build": "npm run clean && ts-node webpack/prod.ts",
+    "start": "craq serve",
+    "build": "craq build",
     "clean": "rm -rf build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +15,7 @@
     "@reduxjs/toolkit": "^1.9.1",
     "craq": "^0.2.1",
     "craq-client": "^0.2.0",
+    "craq-paq": "^0.0.2",
     "craq-react-redux": "^0.0.1",
     "craq-react-renderer": "^0.2.0",
     "craq-server": "^0.2.0",
@@ -25,25 +26,8 @@
   "devDependencies": {
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
-    "css-loader": "^6.7.3",
-    "dotenv": "^16.0.3",
-    "file-loader": "^6.2.0",
-    "mini-css-extract-plugin": "^2.7.2",
-    "nodemon-webpack-plugin": "^4.8.1",
-    "postcss": "^8.4.20",
-    "postcss-loader": "^7.0.2",
-    "postcss-preset-env": "^7.8.3",
     "prettier": "^2.8.1",
-    "redbird": "^0.10.0",
-    "style-loader": "^3.3.1",
-    "ts-loader": "^9.4.2",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.4",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1",
-    "webpack-node-externals": "^3.0.0",
-    "webpack-stats-plugin": "^1.1.1"
+    "typescript": "^4.9.4"
   }
 }
